@@ -1,0 +1,11 @@
+package de.home.uni.studimarkr.client;
+
+import java.util.Map;
+
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.Widget;
+
+public class HomeViewImpl extends Composite implements HomeView{
+
+
+}

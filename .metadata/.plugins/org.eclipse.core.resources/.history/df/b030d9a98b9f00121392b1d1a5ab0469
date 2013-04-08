@@ -1,0 +1,21 @@
+package de.home.uni.studimarkr.client;
+
+import java.util.Map;
+
+import com.google.gwt.user.client.ui.Widget;
+
+public class HomeViewImpl extends Composite implements HomeView{
+
+	@Override
+	public Widget asWidget() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	void apply(Builder request, Map<Image, Integer> imageIndexMap) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

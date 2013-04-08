@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.TextBox"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.Button"/>
+<fullyQualifiedTypeName name="com.google.gwt.event.dom.client.TouchStartHandler"/>
+<fullyQualifiedTypeName name="java.awt.Dialog"/>
+<fullyQualifiedTypeName name="com.google.gwt.aria.client.AlertdialogRole"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.HTML"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.RootPanel"/>
+<fullyQualifiedTypeName name="de.home.uni.studimarkr.client.MarkrLoginPanel"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.Label"/>
+<fullyQualifiedTypeName name="com.google.gwt.dom.client.HeadingElement"/>
+<fullyQualifiedTypeName name="com.google.gwt.uibinder.client.UiField"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.FlowPanel"/>
+<fullyQualifiedTypeName name="com.google.gwt.resources.client.CssResource"/>
+<fullyQualifiedTypeName name="com.google.appengine.repackaged.com.google.api.client.util.Key"/>
+<fullyQualifiedTypeName name="com.google.gwt.resources.client.ClientBundle"/>
+<fullyQualifiedTypeName name="com.google.gwt.resources.client.ClientBundle.Source"/>
+<fullyQualifiedTypeName name="de.home.uni.studimarkr.client.LoginCss"/>
+<fullyQualifiedTypeName name="com.google.gwt.i18n.client.LocalizableResource.Key"/>
+<fullyQualifiedTypeName name="com.google.gwt.resources.client.CssResource.ClassName"/>
+<fullyQualifiedTypeName name="de.home.uni.studimarkr.client.CssRessources"/>
+<fullyQualifiedTypeName name="com.google.gwt.dom.client.Style.Unit"/>
+<fullyQualifiedTypeName name="java.util.logging.Logger"/>
+<fullyQualifiedTypeName name="java.util.logging.Level"/>
+<fullyQualifiedTypeName name="com.google.gwt.event.dom.client.ClickHandler"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.DialogBox"/>
+<fullyQualifiedTypeName name="com.google.gwt.place.shared.Place"/>
+<fullyQualifiedTypeName name="de.home.uni.studimarkr.client.LoginView"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.IsWidget"/>
+<fullyQualifiedTypeName name="com.google.appengine.api.images.Composite"/>
+<fullyQualifiedTypeName name="de.home.uni.studimarkr.client.HomeView"/>
+<fullyQualifiedTypeName name="com.google.gwt.user.client.ui.Composite"/>
+</qualifiedTypeNameHistroy>

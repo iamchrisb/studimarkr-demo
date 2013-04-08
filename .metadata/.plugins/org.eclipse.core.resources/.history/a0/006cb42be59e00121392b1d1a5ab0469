@@ -1,0 +1,106 @@
+package de.home.uni.studimarkr.client;
+
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.Style.Unit;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.FlowPanel;
+import com.google.gwt.user.client.ui.HasText;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.Widget;
+
+public class MarkrLoginPanel extends Composite implements HasText {
+
+	private static MarkrLoginPanelUiBinder uiBinder = GWT.create(MarkrLoginPanelUiBinder.class);
+
+	interface MarkrLoginPanelUiBinder extends UiBinder<Widget, MarkrLoginPanel> { }
+	
+	@UiField Label usernameLabel;
+	@UiField Label pwLabel;
+	@UiField TextBox pwTextBox;
+	@UiField TextBox usernameTextBox;
+	@UiField FlowPanel pwContainer;
+	@UiField FlowPanel labelContainer;
+	@UiField Label clickLabel;
+	@UiField FlowPanel loginContainer;
+
+	public MarkrLoginPanel() {
+		initWidget(uiBinder.createAndBindUi(this));
+		init();
+	}
+
+	private void init() {
+		CssRessources css = GWT.create(CssRessources.class);
+		loginContainer.addStyleName(css.loginCss().getLoginContainer());
+//		loginContainer.getElement().getStyle().setWidth(400, Unit.PX);
+//		loginContainer.getElement().setAttribute("margin", "auto");
+	}
+
+	@Override
+	public String getText() {
+		return this.getClass().getName();
+	}
+
+	@Override
+	public void setText(String text) {
+	}
+
+	public Label getUsernameLabel() {
+		return usernameLabel;
+	}
+
+	public void setUsernameLabel(Label usernameLabel) {
+		this.usernameLabel = usernameLabel;
+	}
+
+	public Label getPwLabel() {
+		return pwLabel;
+	}
+
+	public void setPwLabel(Label pwLabel) {
+		this.pwLabel = pwLabel;
+	}
+
+	public TextBox getPwTextBox() {
+		return pwTextBox;
+	}
+
+	public void setPwTextBox(TextBox pwTextBox) {
+		this.pwTextBox = pwTextBox;
+	}
+
+	public TextBox getUsernameTextBox() {
+		return usernameTextBox;
+	}
+
+	public void setUsernameTextBox(TextBox usernameTextBox) {
+		this.usernameTextBox = usernameTextBox;
+	}
+
+	public FlowPanel getPwContainer() {
+		return pwContainer;
+	}
+
+	public void setPwContainer(FlowPanel pwContainer) {
+		this.pwContainer = pwContainer;
+	}
+
+	public FlowPanel getLabelContainer() {
+		return labelContainer;
+	}
+
+	public void setLabelContainer(FlowPanel labelContainer) {
+		this.labelContainer = labelContainer;
+	}
+
+	public Label getClickLabel() {
+		return clickLabel;
+	}
+
+	public void setClickLabel(Label clickLabel) {
+		this.clickLabel = clickLabel;
+	}
+	
+}

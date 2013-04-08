@@ -1,0 +1,7 @@
+package de.home.uni.studimarkr.client;
+
+import com.google.gwt.resources.client.ClientBundle;
+
+public interface CssRessources extends ClientBundle{
+
+}

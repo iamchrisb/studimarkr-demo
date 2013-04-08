@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+
+	</ui:style>
+	<g:HTMLPanel>
+			<b:Hero>
+				<g:FlowPanel ui:field="loginContainer">
+					<b:Heading size="3" ui:field="loginHeading">Login</b:Heading>
+					<g:FlowPanel>
+						<g:FlowPanel ui:field="labelContainer">
+							<g:Label text="Name" ui:field="usernameLabel"/>
+							<g:TextBox name="usernameTextField" ui:field="usernameTextBox"/>
+						</g:FlowPanel>
+						<g:FlowPanel ui:field="pwContainer">
+							<g:Label text="Password" ui:field="pwLabel"/>
+							<g:TextBox name="passwordTextField" ui:field="pwTextBox"/>
+						</g:FlowPanel>
+						<b:Button block="true" type="SUCCESS" ui:field="loginBtn">Login</b:Button>
+						<g:Label text="Click Me" ui:field="clickLabel"/>
+					</g:FlowPanel>
+				</g:FlowPanel>
+			</b:Hero>
+	</g:HTMLPanel>
+</ui:UiBinder> 
