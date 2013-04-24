@@ -23,7 +23,8 @@
 	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
 	
 	<set-configuration-property name="CssResources.loginContainer" value="pretty"/>
-
+	<set-configuration-property name="CssResources.linkAddCss" value="pretty"/>
+	
 	<!-- Other module inherits                                      -->
 
 	<!-- Specify the app entry point class.                         -->

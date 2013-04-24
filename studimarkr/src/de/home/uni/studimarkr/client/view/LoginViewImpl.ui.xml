@@ -6,6 +6,7 @@
 
 	</ui:style>
 	<g:HTMLPanel>
+			<b:Icon type="COMMENT" iconSize="LARGE" />
 			<b:Hero>
 				<g:FlowPanel ui:field="loginContainer">
 					<b:Heading size="3" ui:field="loginHeading">Login</b:Heading>
@@ -19,7 +20,7 @@
 							<g:TextBox name="passwordTextField" ui:field="pwTextBox"/>
 						</g:FlowPanel>
 						<b:Button block="false" type="SUCCESS" ui:field="loginBtn">Login</b:Button>
-						<g:Label text="Click Me" ui:field="clickLabel"/>
+<!-- 							<g:Button ui:field="loginBtn">Login</g:Button> -->
 					</g:FlowPanel>
 				</g:FlowPanel>
 			</b:Hero>

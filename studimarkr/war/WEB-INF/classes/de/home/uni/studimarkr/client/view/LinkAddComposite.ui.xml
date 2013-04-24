@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	>
+<ui:with type="de.home.uni.studimarkr.client.ressources.MyRessources" field="res"></ui:with>
+	<ui:style>
+	</ui:style>
+	<g:HTMLPanel>
+		<g:FlowPanel ui:field="container">	
+			<b:Label ui:field="label"></b:Label>
+			<b:TextBox styleName="{res.linkAddCss.linkTextField}"></b:TextBox>
+			<b:Button type="SUCCESS" block="false" ui:field="button" >Add</b:Button>
+		</g:FlowPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

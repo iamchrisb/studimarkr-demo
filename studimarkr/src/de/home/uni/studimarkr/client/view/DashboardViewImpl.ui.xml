@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui" xmlns:v="urn:import:de.home.uni.studimarkr.client.view">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel ui:field="panel">
+		<b:Heading size="1">Hello xxx this is your Dashboard.</b:Heading>
+		<v:LinkAddComposite></v:LinkAddComposite>
+	</g:HTMLPanel>
+</ui:UiBinder> 
