@@ -5,11 +5,16 @@
 	>
 <ui:with type="de.home.uni.studimarkr.client.ressources.MyRessources" field="res"></ui:with>
 	<ui:style>
+	@external .kekse;
+		.kekse {
+			margin-bottom: 0 5!important;
+			width: 500px!important;
+		}
 	</ui:style>
 	<g:HTMLPanel>
 		<g:FlowPanel ui:field="container">	
-			<b:Label ui:field="label"></b:Label>
-			<b:TextBox styleName="{res.linkAddCss.linkTextField}"></b:TextBox>
+<!-- 			<b:TextBox styleName="{res.linkAddCss.linkTextField}" ui:field="inputField"></b:TextBox> -->
+			<b:TextBox ui:field="inputField" styleName="{style.kekse}"></b:TextBox>
 			<b:Button type="SUCCESS" block="false" ui:field="button" >Add</b:Button>
 		</g:FlowPanel>
 	</g:HTMLPanel>

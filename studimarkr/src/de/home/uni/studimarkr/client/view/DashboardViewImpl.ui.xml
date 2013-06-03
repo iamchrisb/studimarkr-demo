@@ -8,7 +8,10 @@
 		}
 	</ui:style>
 	<g:HTMLPanel ui:field="panel">
-		<b:Heading size="1">Hello xxx this is your Dashboard.</b:Heading>
+		<b:Heading size="1">Hello <g:Label ui:field="userName"></g:Label> this is your Dashboard.</b:Heading>
 		<v:LinkAddComposite></v:LinkAddComposite>
+		<g:FlowPanel ui:field="linkContainer">
+			
+		</g:FlowPanel>
 	</g:HTMLPanel>
 </ui:UiBinder> 

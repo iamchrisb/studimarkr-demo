@@ -17,7 +17,7 @@
 						</g:FlowPanel>
 						<g:FlowPanel ui:field="pwContainer">
 							<g:Label text="Password" ui:field="pwLabel"/>
-							<g:TextBox name="passwordTextField" ui:field="pwTextBox"/>
+							<b:PasswordTextBox name="passwordTextField" ui:field="pwTextBox"/>
 						</g:FlowPanel>
 						<b:Button block="false" type="SUCCESS" ui:field="loginBtn">Login</b:Button>
 <!-- 							<g:Button ui:field="loginBtn">Login</g:Button> -->

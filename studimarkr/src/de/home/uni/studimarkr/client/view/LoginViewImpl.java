@@ -1,5 +1,7 @@
 package de.home.uni.studimarkr.client.view;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,9 +17,12 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
 
+import de.home.uni.studimarkr.client.model.User;
 import de.home.uni.studimarkr.client.ressources.MyRessources;
 
 public class LoginViewImpl extends Composite implements LoginView {
+	
+	public static List<User> users = new LinkedList<User>();
 
 	Logger logger = Logger.getLogger(this.getClass().getName());
 
@@ -58,6 +63,8 @@ public class LoginViewImpl extends Composite implements LoginView {
 	public LoginViewImpl() {
 		initWidget(uiBinder.createAndBindUi(this));
 		init();
+		users.add(new User("Chris", "access"));
+		users.add(new User("Ben", "1"));
 	}
 
 	private void init() {

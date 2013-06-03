@@ -1,7 +1,7 @@
 package de.home.uni.studimarkr.client.view;
 
 import com.github.gwtbootstrap.client.ui.Button;
-import com.github.gwtbootstrap.client.ui.Label;
+import com.github.gwtbootstrap.client.ui.TextBox;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -19,7 +19,7 @@ public class LinkAddComposite extends Composite implements HasText, LinkAddView 
 			.create(LinkAddCompositeUiBinder.class);
 
 	interface LinkAddCompositeUiBinder extends
-			UiBinder<Widget, LinkAddComposite> {
+	UiBinder<Widget, LinkAddComposite> {
 	}
 
 	public LinkAddComposite() {
@@ -31,15 +31,10 @@ public class LinkAddComposite extends Composite implements HasText, LinkAddView 
 	@UiField
 	protected FlowPanel container;
 	@UiField
-	protected Label label;
+	protected TextBox inputField;
 
 	private Presenter presenter;
 	private String name;
-
-	public LinkAddComposite(String firstName) {
-		initWidget(uiBinder.createAndBindUi(this));
-		button.setText(firstName);
-	}
 
 	@UiHandler("button")
 	void onClick(ClickEvent e) {

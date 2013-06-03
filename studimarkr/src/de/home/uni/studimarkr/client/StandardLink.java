@@ -1,15 +1,27 @@
 package de.home.uni.studimarkr.client;
 
+import java.util.List;
+
 public class StandardLink extends AbstractLink implements Link {
 
-	public StandardLink(String address, String timeStamp, String description,
-			String[] categories) {
-		super(address, timeStamp, description, categories);
+	public StandardLink(String address, String name, String timeStamp, String description,
+			List<String> categories) {
+		super(address, name, timeStamp, description, categories);
 	}
 
 	@Override
-	public String[] getCategories() {
-		return null;
+	public List<String> getCategories() {
+		return categories;
+	}
+
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	@Override
+	public String getAdress() {
+		return adress;
 	}
 
 }

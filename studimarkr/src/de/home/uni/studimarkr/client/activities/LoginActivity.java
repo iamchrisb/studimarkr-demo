@@ -1,41 +1,40 @@
 package de.home.uni.studimarkr.client.activities;
 
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.google.gwt.activity.shared.AbstractActivity;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.Place;
-import com.google.gwt.place.shared.PlaceChangeEvent;
+import com.google.gwt.place.shared.PlaceController;
+import com.google.gwt.storage.client.Storage;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
+import com.google.inject.Inject;
 
-import de.home.uni.studimarkr.client.common.ClientFactory;
+import de.home.uni.studimarkr.client.model.User;
 import de.home.uni.studimarkr.client.places.DashboardPlace;
-import de.home.uni.studimarkr.client.places.LoginPlace;
 import de.home.uni.studimarkr.client.view.LoginView;
+import de.home.uni.studimarkr.client.view.LoginViewImpl;
 
 public class LoginActivity extends AbstractActivity implements
-		LoginView.Presenter {
+LoginView.Presenter {
 
 	final static Logger LOGGER = Logger
 			.getLogger(LoginActivity.class.getName());
 
-	private final ClientFactory clientFactory;
-	private final String name;
+	private final LoginView view;
+	private final PlaceController placeController;
 
-	private LoginView view;
-
-	public LoginActivity(LoginPlace place, ClientFactory factory) {
-		// use GIN to inject place, view, ..
-		this.clientFactory = factory;
-		this.name = place.getLoginName();
+	@Inject
+	public LoginActivity(LoginView view, PlaceController placeController) {
+		//TODO use GIN to inject place, view, .. not factory
+		this.view = view;
+		this.placeController = placeController;
 	}
 
 	@Override
 	public void start(AcceptsOneWidget panel, EventBus eventBus) {
-		view = clientFactory.getLoginView();
-		view.setName(name);
+		view.setName("login");
 		view.setPresenter(this);
 		panel.setWidget(view.asWidget());
 	}
@@ -43,14 +42,14 @@ public class LoginActivity extends AbstractActivity implements
 	@Override
 	public void goTo(Place place) {
 		// fire event for the eventbus and change place
-		clientFactory.getPlaceController().goTo(place);
+		placeController.goTo(place);
 	}
 
 	@Override
 	public void handleLoginButtonClicked() {
 		if (checkUserCredentials()) {
-			goTo(new DashboardPlace("home"));
-			// clientFactory.getEventBus().fireEvent(PlaceChangeEvent<>)
+			goTo(new DashboardPlace());
+			//TODO CHANGE GOTO TO EVENT clientFactory.getEventBus().fireEvent(PlaceChangeEvent<>)
 			return;
 		}
 		Window.alert("wrong username or password :-(");
@@ -58,14 +57,13 @@ public class LoginActivity extends AbstractActivity implements
 
 	private boolean checkUserCredentials() {
 		if (view != null) {
-			// TODO real rest-service call
-			if (view.getUsername().equals("Chris")
-					&& view.getPassword().equals("123")) {
-				/**
-				 * TODO if true -> use localStorage / sessionStorage to keep the
-				 * user logged in on other sides.
-				 */
-				return true;
+			//TODO USE REST CALL FOR GETTING USERS
+			for (User user : LoginViewImpl.users) {
+				if(view.getUsername().equals(user.name) && view.getPassword().equals(user.password)) {
+					Storage localStorage = Storage.getLocalStorageIfSupported();
+					localStorage.setItem(User.class.getName(), view.getUsername() + "," + view.getPassword());
+					return true;
+				}
 			}
 		}
 		return false;

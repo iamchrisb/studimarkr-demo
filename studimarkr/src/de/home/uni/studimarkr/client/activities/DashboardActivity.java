@@ -1,28 +1,33 @@
 package de.home.uni.studimarkr.client.activities;
 
-import com.google.gwt.activity.shared.AbstractActivity;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.Place;
+import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
+import com.google.inject.Inject;
 
-import de.home.uni.studimarkr.client.common.ClientFactory;
+import de.home.uni.studimarkr.client.common.LocalStorageFacade;
 import de.home.uni.studimarkr.client.places.DashboardPlace;
 import de.home.uni.studimarkr.client.view.DashboardView;
 
-public class DashboardActivity extends AbstractActivity implements
-		DashboardView.Presenter {
+public class DashboardActivity extends SecureActivity implements
+DashboardView.Presenter {
 
-	private final ClientFactory clientFactory;
 	private final String name;
+	private final DashboardView view;
+	private final PlaceController placeController;
 
-	public DashboardActivity(DashboardPlace place, ClientFactory clientFactory) {
-		this.name = place.getDashboardName();
-		this.clientFactory = clientFactory;
+	@Inject
+	public DashboardActivity(DashboardPlace place, DashboardView view, PlaceController placeController, LocalStorageFacade storage) {
+		super(storage, placeController);
+		name = place.getDashboardName();
+		this.view = view;
+		this.placeController = placeController;
 	}
 
 	@Override
 	public void start(AcceptsOneWidget panel, EventBus eventBus) {
-		DashboardView view = clientFactory.getDashboardView();
+		super.start(panel, eventBus);
 		view.setName(name);
 		view.setPresenter(this);
 		panel.setWidget(view.asWidget());
@@ -30,7 +35,7 @@ public class DashboardActivity extends AbstractActivity implements
 
 	@Override
 	public void goTo(Place place) {
-		clientFactory.getPlaceController().goTo(place);
+		placeController.goTo(place);
 	}
 
 }

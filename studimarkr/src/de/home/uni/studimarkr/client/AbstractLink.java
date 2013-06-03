@@ -1,18 +1,22 @@
 package de.home.uni.studimarkr.client;
 
+import java.util.List;
+
 public abstract class AbstractLink {
 
-	protected String address;
+	protected String adress;
+	protected String name;
 	protected String timeStamp;
 	protected String description;
-	protected String[] categories;
+	protected List<String> categories;
 
-	public AbstractLink(String address, String timeStamp, String description,
-			String[] categories) {
-		this.address = address;
+	public AbstractLink(String address, String name, String timeStamp, String description,
+			List<String> categories) {
+		this.adress = address;
 		this.timeStamp = timeStamp;
 		this.description = description;
 		this.categories = categories;
+		this.name = name;
 	}
 
 }

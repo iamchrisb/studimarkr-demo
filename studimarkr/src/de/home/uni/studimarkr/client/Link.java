@@ -1,7 +1,14 @@
 package de.home.uni.studimarkr.client;
 
+import java.util.List;
+
+
 public interface Link {
 
-	String[] getCategories();
+	List<String> getCategories();
+
+	String getName();
+
+	String getAdress();
 
 }

@@ -4,13 +4,13 @@ import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;
 
 public class DashboardPlace extends Place{
-	
-	private String name;
 
-	public DashboardPlace(String token) {
-		this.name = token;
+	private final String name;
+
+	public DashboardPlace() {
+		name = "DashboardPlace";
 	}
-	
+
 	public String getDashboardName() {
 		return name;
 	}
@@ -19,13 +19,13 @@ public class DashboardPlace extends Place{
 
 		@Override
 		public DashboardPlace getPlace(String token) {
-			return new DashboardPlace(token);
+			return new DashboardPlace();
 		}
 
 		@Override
 		public String getToken(DashboardPlace place) {
 			return place.getDashboardName();
 		}
-		
+
 	}
 }

@@ -13,6 +13,8 @@
 	<inherits name='com.github.gwtbootstrap.Bootstrap' />
 	<inherits name='com.google.gwt.activity.Activity'/>
 	<inherits name='com.google.gwt.place.Place'/>
+	
+	<inherits name="com.google.gwt.inject.Inject"/>
 
 	<!-- Inherit the default GWT style sheet.  You can change       -->
 	<!-- the theme of your GWT application by uncommenting          -->
